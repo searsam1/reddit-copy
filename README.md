@@ -1,6 +1,3 @@
-Certainly! Crafting a clear and concise repository description for your GitHub project is important as it provides visitors with a quick understanding of your project's purpose and features. Here's a suggested description for your Reddit app project:
-
----
 
 ### Reddit Viewer: A React-based Reddit Client
 
@@ -27,11 +24,7 @@ To start using the Reddit Viewer app:
 3. Start the app using `npm start`.
 
 **Contribute:**
-Contributions to the Reddit Viewer are welcome! Whether it's feature suggestions, bug reports, or code contributions, feel free to open an issue or submit a pull request.
+Contributions to Simple Reddit are welcome! Whether it's feature suggestions, bug reports, or code contributions, feel free to open an issue or submit a pull request.
 
 **Disclaimer:**
 This app is developed for educational purposes and is not affiliated with Reddit Inc.
-
----
-
-Feel free to modify or expand upon this description to better fit your project’s specifics or personal style. Adding a good README with detailed instructions and possibly screenshots would also be beneficial for users and contributors.
