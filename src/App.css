@@ -1,38 +1,71 @@
-.App {
+.top-header {
+  background-color: rgb(224, 224, 224);
+  border-bottom: 1px solid grey;
   text-align: center;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.myIconSize {
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+  fill: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.post-box {
+  background-color: rgba(224, 224, 224, 0.233);
+  max-width: 800px;
+  max-height: 800px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post-box::after, .post-box::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.post-box:hover {
+  background-color: rgba(224, 224, 224, 0.482);
+}
+
+.btn.btn-secondary {
+  background-color: rgba(224, 224, 224, 0.482);
+  color: black;
+}
+
+.btn.btn-secondary:hover {
+  background-color: rgba(224, 224, 224, 0.791);
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; 
+}
+
+.image-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  height: 500px;           /* Set a height for the container */
+  width: 100%;             /* Set the width of the container */
+  overflow: hidden;        /* Optional: in case the image is bigger than the container */
+  /* Same as the image */
 }
 
-.App-link {
-  color: #61dafb;
+.posts-ul {
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.selftext {
+  max-height: 300px; /* Adjust this value as needed */
+  overflow-y: auto; /* Adds a scrollbar when content is too long */
+  word-wrap: break-word; /* Ensures long words don't cause layout issues */
+  margin-bottom: 15px; /* Add some space below the text */
 }
