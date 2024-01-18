@@ -1,0 +1,21 @@
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+function CommentsPage() {
+  const { postId } = useParams(); // Access the URL parameter
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    // Fetch comments based on postId
+    // For example: fetch(`https://www.reddit.com/comments/${postId}.json`)
+    // Then set the comments in state
+  }, [postId]);
+
+  return (
+    <div>
+      {/* Render the comments */}
+    </div>
+  );
+}
+
+export default CommentsPage;

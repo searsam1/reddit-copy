@@ -1,5 +1,5 @@
 .top-header {
-  background-color: rgb(224, 224, 224);
+  background-color: rgba(226, 158, 197, 0.648);
   border-bottom: 1px solid grey;
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
@@ -10,6 +10,10 @@
   height: 40px;
   margin: 5px auto;
   fill: black;
+}
+
+h1 {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .post-box {

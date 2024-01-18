@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom';
+
+
 function formatLikes(likes) {
     likes = +likes; // Convert to a number if not already
     if (likes < 1000) {
@@ -14,7 +17,8 @@ function formatLikes(likes) {
 
 export function PostPreview({
     title, selftext, likes, imgSrc,
-    author, subreddit, num_comments
+    author, subreddit, num_comments, 
+    postId
 
 }) {
     return (
@@ -43,12 +47,12 @@ export function PostPreview({
                     south
                 </span>
             </button>
-            <button className='mx-2 btn btn-outline-dark'>
-                <span class="material-symbols-outlined">
+            <Link className='btn btn-outline-dark' to={`/comments/${postId}`}>
+                <span className="material-symbols-outlined">
                     chat
-                </span> {num_comments}
-            </button>
-
+                </span>
+                {num_comments}
+            </Link>
         </div>
     );
 }
