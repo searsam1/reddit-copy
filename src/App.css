@@ -13,12 +13,12 @@
 }
 
 .post-box {
-  background-color: rgba(224, 224, 224, 0.233);
   max-width: 800px;
   max-height: 800px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.136);
 }
 
 .post-box::after, .post-box::before {
@@ -30,18 +30,6 @@
   margin: 10px 0;
 }
 
-.post-box:hover {
-  background-color: rgba(224, 224, 224, 0.482);
-}
-
-.btn.btn-secondary {
-  background-color: rgba(224, 224, 224, 0.482);
-  color: black;
-}
-
-.btn.btn-secondary:hover {
-  background-color: rgba(224, 224, 224, 0.791);
-}
 img {
   max-width: 100%;
   max-height: 100%;
@@ -55,7 +43,8 @@ img {
   align-items: center;     /* Center vertically */
   height: 500px;           /* Set a height for the container */
   width: 100%;             /* Set the width of the container */
-  overflow: hidden;        /* Optional: in case the image is bigger than the container */
+  overflow: hidden; 
+  margin-bottom: 10px;       /* Optional: in case the image is bigger than the container */
   /* Same as the image */
 }
 
@@ -68,4 +57,27 @@ img {
   overflow-y: auto; /* Adds a scrollbar when content is too long */
   word-wrap: break-word; /* Ensures long words don't cause layout issues */
   margin-bottom: 15px; /* Add some space below the text */
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24,
+  
+}
+
+.subreddit {
+  font-size: small;
+}
+
+.author {
+  font-size: small;
+}
+
+.post-title {
+  color: black;
+  margin-bottom: 15px;
 }

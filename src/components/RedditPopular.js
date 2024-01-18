@@ -41,19 +41,14 @@ function RedditPopular() {
       <ul className='posts-ul'>
         {posts.map((post, index) => (
           <li key={index}>
-            {/* <h2>{post.data.title}</h2>
-            <p>{post.data.selftext || 'No text content'}</p>
-            {getImageUrl(post) && 
-            <div className="image-container">
-                <img src={getImageUrl(post)} alt="Post content" />
-            </div>
-            }
-            <p>Likes (Upvotes): {post.data.ups}</p> */}
             <PostPreview
                 title={post.data.title}
                 selftext={post.data.selftext || null}
                 likes={post.data.ups}
                 imgSrc={getImageUrl(post)}
+                author={post.data.author}
+                subreddit={post.data.subreddit}
+                num_comments={post.data.num_comments}
             />
           </li>
         ))}
