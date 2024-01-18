@@ -49,6 +49,7 @@ function RedditPopular() {
                 author={post.data.author}
                 subreddit={post.data.subreddit}
                 num_comments={post.data.num_comments}
+                postId={post.data.id}
             />
           </li>
         ))}

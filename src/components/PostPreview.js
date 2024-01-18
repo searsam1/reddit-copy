@@ -17,10 +17,11 @@ function formatLikes(likes) {
 
 export function PostPreview({
     title, selftext, likes, imgSrc,
-    author, subreddit, num_comments, 
+    author, subreddit, num_comments,
     postId
 
 }) {
+    // console.log("Post ID:", postId);
     return (
         <div className='p-3 my-3 container rounded-3 post-box'>
             <p className="subreddit">r/{subreddit}</p>
@@ -47,7 +48,9 @@ export function PostPreview({
                     south
                 </span>
             </button>
-            <Link className='btn btn-outline-dark' to={`/comments/${postId}`}>
+            <Link
+                className='btn btn-outline-dark'
+                to={`/comments/${postId}`}>
                 <span className="material-symbols-outlined">
                     chat
                 </span>
