@@ -1,23 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
+import { renderComment } from '../helpers/commentHelper';
+import useFetchComments from '../hooks/useFetchComments';
 
 function CommentsPage() {
   const { postId } = useParams();
-  const [comments, setComments] = useState([]);
+  const { comments, isLoading, error } = useFetchComments(postId);
 
-  useEffect(() => {
-    // Set the document title using the postId
-    document.title = `Post: ${postId}`;
-
-    // Fetch comments based on postId
-    // ... Fetching logic ...
-  }, [postId]); // Dependency array ensures this effect runs when postId changes
+  if (isLoading) return <div>Loading comments...</div>;
+  if (error) return <div>Error loading comments: {error}</div>;
 
   return (
     <div>
-      {/* Your component content */}
+      <h1>Comments for Post {postId}</h1>
+      <ul>
+        {comments.map((comment) => (
+          renderComment(comment)
+        ))}
+      </ul>
     </div>
   );
+
 }
 
 export default CommentsPage;

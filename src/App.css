@@ -85,3 +85,7 @@ img {
   color: black;
   margin-bottom: 15px;
 }
+
+.commentScore {
+  font-size: smaller;
+}
