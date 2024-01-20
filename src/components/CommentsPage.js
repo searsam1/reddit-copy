@@ -7,7 +7,10 @@ function CommentsPage() {
   const { postId } = useParams();
   const { comments, isLoading, error } = useFetchComments(postId);
 
-  if (isLoading) return <div>Loading comments...</div>;
+  if (isLoading) return <div>Loading comments<span class="material-symbols-outlined">
+    hourglass_top
+  </span>
+  </div>;
   if (error) return <div>Error loading comments: {error}</div>;
 
   return (
