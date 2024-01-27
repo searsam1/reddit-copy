@@ -11,12 +11,13 @@ function App() {
     <Router>
       <div className="App">
         <header className='top-header'>
-          <MyIcon className="myIconSize" /> Simple Reddit
+           <h1 className='display-6'>Simple <MyIcon className="myIconSize" /> Reddit</h1>
+          <nav>
+            <Link className='btn btn-dark me-2' to="/">Popular Posts</Link>
+            <Link className='btn btn-dark me-2' to="/hello-world">Hello World</Link>
+          </nav>
         </header>
-        <nav>
-          <Link className='btn btn-dark me-2' to="/">Popular Posts</Link>
-          <Link className='btn btn-dark me-2' to="/hello-world">Hello World</Link>
-        </nav>
+
         <Routes>
           <Route path="/" element={<RedditPopular />} />
           <Route path="/hello-world" element={<HelloWorld />} />

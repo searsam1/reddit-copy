@@ -2,34 +2,36 @@
 import { useState, useEffect } from 'react';
 
 const useFetchComments = (postId) => {
+  const [postDetails, setPostDetails] = useState(null);
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchComments = async () => {
+    async function fetchData() {
       try {
-        setIsLoading(true);
-        const response = await fetch(`https://www.reddit.com/comments/${postId}.json`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        setComments(data[1].data.children.map(child => child.data));
-      } catch (error) {
-        console.error('Error fetching comments:', error);
-        setError(error.message);
+        // Fetch post details
+        const postResponse = await fetch(`https://www.reddit.com/by_id/t3_${postId}.json`);
+        const postData = await postResponse.json();
+        setPostDetails(postData.data.children[0].data);
+
+        // Fetch comments
+        const commentsResponse = await fetch(`https://www.reddit.com/comments/${postId}.json`);
+        const commentsData = await commentsResponse.json();
+        setComments(commentsData[1].data.children.map(child => child.data));
+      } catch (err) {
+        setError(err.message);
       } finally {
         setIsLoading(false);
       }
-    };
+    }
 
     if (postId) {
-      fetchComments();
+      fetchData();
     }
   }, [postId]);
 
-  return { comments, isLoading, error };
+  return { postDetails, comments, isLoading, error };
 };
 
 export default useFetchComments;

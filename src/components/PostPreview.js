@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-
 function formatLikes(likes) {
     likes = +likes; // Convert to a number if not already
     if (likes < 1000) {

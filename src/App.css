@@ -1,15 +1,28 @@
 .top-header {
-  background-color: rgba(226, 158, 197, 0.648);
+  color: white;
   border-bottom: 1px solid grey;
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.879);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+body {
+  padding-top: 140px;
+  background-color: black;
 }
 
 .myIconSize {
   width: 40px;
   height: 40px;
   margin: 5px auto;
-  fill: black;
+  fill: rgb(255, 7, 7);
 }
 
 h1 {
@@ -22,10 +35,12 @@ h1 {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  border: 1px solid rgba(0, 0, 0, 0.136);
+  border: 1px solid rgb(249, 3, 3);
+  background-color: white;
 }
 
-.post-box::after, .post-box::before {
+.post-box::after,
+.post-box::before {
   content: '';
   display: block;
   height: 1px;
@@ -37,18 +52,24 @@ h1 {
 img {
   max-width: 100%;
   max-height: 100%;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; 
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 10px;
 }
 
 .image-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  height: 500px;           /* Set a height for the container */
-  width: 100%;             /* Set the width of the container */
-  overflow: hidden; 
-  margin-bottom: 10px;       /* Optional: in case the image is bigger than the container */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 500px;
+  /* Set a height for the container */
+  width: 100%;
+  /* Set the width of the container */
+  overflow: hidden;
+  margin-bottom: 10px;
+  /* Optional: in case the image is bigger than the container */
   /* Same as the image */
 }
 
@@ -57,20 +78,24 @@ img {
 }
 
 .selftext {
-  max-height: 300px; /* Adjust this value as needed */
-  overflow-y: auto; /* Adds a scrollbar when content is too long */
-  word-wrap: break-word; /* Ensures long words don't cause layout issues */
-  margin-bottom: 15px; /* Add some space below the text */
+  max-height: 300px;
+  /* Adjust this value as needed */
+  overflow-y: auto;
+  /* Adds a scrollbar when content is too long */
+  word-wrap: break-word;
+  /* Ensures long words don't cause layout issues */
+  margin-bottom: 15px;
+  /* Add some space below the text */
 }
 
 .material-symbols-outlined {
   vertical-align: middle;
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24,
-  
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24,
+
 }
 
 .subreddit {
@@ -88,4 +113,41 @@ img {
 
 .commentScore {
   font-size: smaller;
+}
+
+.comment-container {
+  overflow-x: auto;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.replies {
+  font-size: .9rem;
+}
+
+.comment-ups {
+  font-size: small;
+}
+
+.comment-author {
+  font-size: small;
+  margin-right: 10px;
+}
+
+.comment-body {
+  border: 1px solid rgba(0, 0, 0, 0.218);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+.underneath {
+  border-top: 1px solid black;
+}
+
+.comment-body::before {
+  content: "> ";
 }

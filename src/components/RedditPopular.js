@@ -22,7 +22,7 @@ function RedditPopular() {
 
   return (
     <div>
-      <p className='text-center'>Popular Posts</p>
+      <h2 className='text-center text-light display-4'>Popular Posts</h2>
       <ul className='posts-ul'>
         {posts.map((post, index) => (
           <li key={index}>
