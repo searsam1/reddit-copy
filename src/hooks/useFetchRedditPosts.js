@@ -1,7 +1,7 @@
 // hooks/useFetchRedditPosts.js
 import { useState, useEffect } from 'react';
 
-const useFetchRedditPosts = () => {
+const useFetchRedditPosts = (subreddit) => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -9,7 +9,8 @@ const useFetchRedditPosts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://www.reddit.com/r/popular.json');
+        console.log(`https://www.reddit.com/r/${subreddit}.json`)
+        const response = await fetch(`https://www.reddit.com/r/${subreddit}.json`);
         if (!response.ok) {
           throw new Error(`Error: ${response.status}`);
         }

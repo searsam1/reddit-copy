@@ -3,7 +3,7 @@ import { PostPreview } from './PostPreview';
 import useFetchRedditPosts from '../hooks/useFetchRedditPosts';
 
 function RedditPopular() {
-  const { posts, isLoading, error } = useFetchRedditPosts();
+  const { posts, isLoading, error } = useFetchRedditPosts("popular");
 
   const getImageUrl = (post) => {
     // Check if the post has a preview and an image
