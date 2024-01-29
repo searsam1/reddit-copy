@@ -19,7 +19,7 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/" element={<RedditPage subreddit={"popular"}/>} />
+        <Route path="/Popular" element={<Popular/>} />
           <Route path="/AskReddit" element={<AskReddit/>} />
           <Route path="/comments/:postId" element={<CommentsPage />} />
         </Routes>
