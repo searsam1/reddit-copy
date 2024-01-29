@@ -2,8 +2,8 @@ import React from 'react';
 import { PostPreview } from './PostPreview';
 import useFetchRedditPosts from '../hooks/useFetchRedditPosts';
 
-function RedditPopular() {
-  const { posts, isLoading, error } = useFetchRedditPosts("popular");
+function RedditPage({subreddit}) {
+  const { posts, isLoading, error } = useFetchRedditPosts(subreddit);
 
   const getImageUrl = (post) => {
     // Check if the post has a preview and an image
@@ -43,4 +43,4 @@ function RedditPopular() {
   );
 }
 
-export default RedditPopular;
+export default RedditPage;
