@@ -4,7 +4,7 @@ import RedditPage from './components/RedditPage';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CommentsPage from './components/CommentsPage'; // Import the CommentsPage component
 import AskReddit from "./components/AskReddit"
-
+import Popular from "./components/Popular"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <header className='top-header'>
            <h1 className='display-6'>Simple <MyIcon className="myIconSize" /> Reddit</h1>
           <nav>
-            <Link className='btn btn-dark me-2' to="/">Popular Posts</Link>
+            <Link className='btn btn-dark me-2' to="/popular">Popular Posts</Link>
             <Link className='btn btn-dark me-2' to="/AskReddit">Ask Reddit</Link>
           </nav>
         </header>
