@@ -2,7 +2,7 @@ import React from 'react';
 import { PostPreview } from './PostPreview';
 import useFetchRedditPosts from '../hooks/useFetchRedditPosts';
 
-function RedditPage({subreddit}) {
+function RedditPage({subreddit, header}) {
   const { posts, isLoading, error } = useFetchRedditPosts(subreddit);
 
   const getImageUrl = (post) => {
