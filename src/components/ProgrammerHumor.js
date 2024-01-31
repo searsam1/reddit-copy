@@ -3,7 +3,7 @@ import RedditPage from "./RedditPage";
 function ProgrammerHumor() {
     return (
         <>
-            <RedditPage subreddit={"ProgrammerHumor"} />
+            <RedditPage header={"ProgrammerHumor"} subreddit={"ProgrammerHumor"} />
         </>
     )
 }

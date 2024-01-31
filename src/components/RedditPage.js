@@ -13,7 +13,7 @@ function RedditPage({subreddit, header}) {
     return null; // Return null if no image is found
   };
 
-  if (isLoading) return <div>Loading
+  if (isLoading) return <div className='loading'>Loading
     <span class="material-symbols-outlined">
       hourglass_top
     </span>
@@ -22,7 +22,7 @@ function RedditPage({subreddit, header}) {
 
   return (
     <div>
-      <h2 className='text-center text-light display-4'>Popular Posts</h2>
+      <h2 className='text-center text-light display-4'>r/{header}</h2>
       <ul className='posts-ul'>
         {posts.map((post, index) => (
           <li key={index}>

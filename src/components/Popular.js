@@ -3,7 +3,7 @@ import RedditPage from "./RedditPage";
 function Popular() {
     return (
         <>
-            <RedditPage subreddit={"popular"} />
+            <RedditPage header={"popular"} subreddit={"popular"} />
         </>
     )
 }

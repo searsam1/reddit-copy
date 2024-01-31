@@ -156,3 +156,10 @@ ul {
 .btn-dark {
   border: 1px solid rgba(254, 0, 0, 0.375);
 }
+
+.loading {
+  text-align: center;
+  color: white;
+  padding: 10px;
+   
+}

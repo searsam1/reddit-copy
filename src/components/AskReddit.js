@@ -3,7 +3,7 @@ import RedditPage from "./RedditPage";
 function AskReddit() {
     return (
         <>
-            <RedditPage subreddit={"askReddit"} />
+            <RedditPage header={"askReddit"} subreddit={"askReddit"} />
         </>
     )
 }
