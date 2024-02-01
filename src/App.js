@@ -5,6 +5,7 @@ import CommentsPage from './components/CommentsPage'; // Import the CommentsPage
 import AskReddit from "./components/AskReddit"
 import Popular from "./components/Popular"
 import ProgrammerHumor from './components/ProgrammerHumor';
+import { Home } from './components/Home';
 
 function App() {
   return (
@@ -13,19 +14,19 @@ function App() {
         <header className='top-header'>
           <h1 className='display-6'>Simple <MyIcon className="myIconSize" /> Reddit</h1>
           <nav>
+            <Link className='btn btn-dark me-2' to="/">Home</Link>
             <Link className='btn btn-dark me-2' to="/popular">Popular Posts</Link>
             <Link className='btn btn-dark me-2' to="/AskReddit">Ask Reddit</Link>
             <Link className='btn btn-dark me-2' to="/ProgrammerHumor">Programmer Humor</Link>
 
           </nav>
         </header>
-
         <Routes>
           <Route path="/Popular" element={<Popular />} />
           <Route path="/AskReddit" element={<AskReddit />} />
           <Route path="/comments/:postId" element={<CommentsPage />} />
           <Route path="/ProgrammerHumor" element={<ProgrammerHumor />} />
-
+          <Route path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>
