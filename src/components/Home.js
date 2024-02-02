@@ -5,8 +5,8 @@ export function Home() {
             <h2 className="display-2 text-light text-center">
                 Simple <span className="text-danger">Reddit <MyIcon className="myIconSize" /></span>
             </h2>
-            <p className='m-5 text-white text-center'>
-                Click on a subreddit in the navbar to get started!
+            <p style={{fontSize:"25px"}} className='m-5 text-white text-center'>
+                Click on a <span className='text-danger'>subreddit</span> in the navbar to get started!
             </p>
             
         </>
