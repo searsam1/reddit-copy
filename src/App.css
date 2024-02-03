@@ -160,6 +160,10 @@ ul {
 .loading {
   text-align: center;
   color: white;
-  padding: 10px;
-   
+  padding: 10px;  
+}
+
+.home-img {
+  width: 50vw;
+  margin: 0 auto;
 }
